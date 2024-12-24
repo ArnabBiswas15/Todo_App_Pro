@@ -1,0 +1,212 @@
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fb;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* Todo container */
+.todo-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.todo-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Input form */
+.todo-input-form {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #ccd0d5;
+  border-radius: 50px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.todo-input:focus {
+  border-color: #4c9aff;
+}
+
+.add-btn {
+  background-color: #4c9aff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 15px;
+}
+
+.add-btn:hover {
+  background-color: #3381e7;
+}
+
+.add-btn:active {
+  background-color: #2767b2;
+}
+
+/* Todo list styling */
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual Todo item */
+.todo-item {
+  display: flex;
+  flex-direction: column; /* Allow items to stack */
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f9f9fb;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  position: relative;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.todo-item:hover {
+  background-color: #f1f1f7;
+  transform: scale(1.02);
+}
+
+.todo-item.completed {
+  background-color: #e1f7d5;
+  text-decoration: line-through;
+  color: #6b6b6b;
+}
+
+/* Button container for all buttons aligned to the right */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%; /* Make sure the button container takes the full width */
+  flex-wrap: wrap; /* Allow buttons to wrap to a new line if needed */
+  margin-top: 10px; /* Add space between the text and buttons */
+}
+
+/* Button Styles */
+button {
+  border: none;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+/* Edit Button */
+.edit-btn {
+  background-color: #ffc107;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.edit-btn:active {
+  background-color: #c69500;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.delete-btn:active {
+  background-color: #a71d2a;
+}
+
+/* Mark as Complete / Undo Button */
+.check-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.check-btn:hover {
+  background-color: #218838;
+}
+
+.check-btn:active {
+  background-color: #1c7430;
+}
+
+/* Focus state for buttons */
+button:focus {
+  outline: none;
+}
+
+/* Active state for buttons */
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for small screens */
+@media (max-width: 500px) {
+  .todo-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .todo-input {
+    font-size: 14px;
+  }
+
+  .add-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  /* Adjust button size on small screens */
+  .button-container button {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+}
